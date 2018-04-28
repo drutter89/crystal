@@ -13,9 +13,17 @@
 7. win or lose
 8. update win score
 */
+ 
 
+$(document).ready(function() {
+    var randomNumber;
+    var WINS = 0;
+    var LOSSES = 0;
+    var SCORE = 0;
+    var total = 0;
+});
 
-
+//set variables
 var state = {
 crystal1:"button1",
 crystal2:"button2",
@@ -26,16 +34,15 @@ WINS:0,
 LOSSES:0,
 SCORE:0,
 total:0,
-}
 
+}
 
 
 // Function to generate random number
 
 function randomNumber(){
     var startingNumber= Math.floor(Math.random() * 60) +40;
-    state.text(randomNumber) = startingNumber;
-    $("#randNumber").text("Match this random number:" + randomNumber);
+    $("#randNumber").text("Match this number" + randomNumber);
 }
 randomNumber();
 
